@@ -82,10 +82,10 @@ int loaded_csv(const char *filename, Waveform **waveform, size_t *count) {
 static void w_phase(FILE *file, const char *phase_name, const PhaseR *phase) {//Write results for individal phase
     fprintf(file, "%s\n", phase_name);
     fprintf(file, "\n");
-    fprintf(file, "RMS Voltage:     %.3f V\n", phase->rms);
-    fprintf(file, "Peak to peak Voltage:     %.3f V\n", phase->ptp);
-    fprintf(file, "DC Offset:    %.3f V\n", phase->dc_offset);
-    fprintf(file, "Clipped Samples:     %d\n", phase->c_count);
+    fprintf(file, "RMS Voltage: %.3f V\n", phase->rms);
+    fprintf(file, "Peak to peak Voltage: %.3f V\n", phase->ptp);
+    fprintf(file, "DC Offset: %.3f V\n", phase->dc_offset);
+    fprintf(file, "Clipped Samples: %d\n", phase->c_count);
 
     if (phase->w_tolerance == 1) {
         fprintf(file,"Tolerance Check: Within Tolerance\n\n");
