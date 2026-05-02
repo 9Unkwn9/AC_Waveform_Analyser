@@ -12,11 +12,18 @@ Introduction
 
 How to use the code:
 - 
-Open CLion and open the file called AC_Waveform_Analyser, to ensure this code works it also requires its data sheet which is power_quality_log.csv.
+- Open CLion and load the project folder 'AC_Waveform_Analyser'
+- Ensure the file  'power_quality_log.csv' is located within the correct directory otherwise the code will not function
+- Run the Program with the CSV file as an arguement
+
+
+
 
 Output and What to expect:
 -
-Once the code is ran and is successful you will get a message saying "Data Collected, results written within results.txt" once you are this stage open file directory and head for where the file is located and find results.txt. This can be open with anything that can be opened as a text file such as Windows Notes.
+Once the programs runs successfully, you will see the message "Data collected, results written to results.txt". A file named 'results.txt' will be created in the directory.
+
+This file contains the analysis results and can be opened using any text editor such as Notepad.
 
 Author
 -
