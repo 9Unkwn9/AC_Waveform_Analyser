@@ -9,7 +9,7 @@ Description: AC Waveform Analyser
 Author: Adam Rychlinski - 23024670
 Date: 02/05/2026
 Version 2.0
-Log: Creating Mathmatical solutions required for waveform
+Log: Creating file and Creating outputs for the results
 */
 
 static int c_rows(FILE *fp) {//Number of rows within CSV file
@@ -88,9 +88,9 @@ static void w_phase(FILE *file, const char *phase_name, const PhaseR *phase) {//
     fprintf(file, "Clipped Samples:     %d\n", phase->c_count);
 
     if (phase->w_tolerance == 1) {
-        fprintf(file,"Within Tolerance\n\n");
+        fprintf(file,"Tolerance Check: Within Tolerance\n\n");
     }else {
-        fprintf(file,"Outside of Tolerance\n");
+        fprintf(file,"Tolerance Check: Outside of Tolerance\n");
     }
 
 }
