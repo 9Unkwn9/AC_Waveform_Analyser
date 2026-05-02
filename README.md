@@ -14,7 +14,7 @@ How to use the code:
 - 
 - Open CLion and load the project folder 'AC_Waveform_Analyser'
 - Ensure the file  'power_quality_log.csv' is located within the correct directory otherwise the code will not function
-- Run the Program with the CSV file as an arguement
+- Run the Program with the CSV file as an argument
 
 
 
