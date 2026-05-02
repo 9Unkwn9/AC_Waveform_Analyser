@@ -80,12 +80,12 @@ int loaded_csv(const char *filename, Waveform **waveform, size_t *count) {
 }
 
 static void w_phase(FILE *file, const char *phase_name, const PhaseR *phase) {//Write results for individal phase
-    fprintf(file, "%s\n\n", phase_name);
-    fprintf(file, "\n\n\n");
-    fprintf(file, "RMS Voltage: %.3f V\n", phase->rms);
-    fprintf(file, "Peak to peak Voltage: %.3f V\n", phase->ptp);
-    fprintf(file, "DC Offset: %.3f V\n", phase->dc_offset);
-    fprintf(file, "Clipped Samples: %d\n", phase->c_count);
+    fprintf(file, "%s\n", phase_name);
+    fprintf(file, "\n");
+    fprintf(file, "RMS Voltage:     %.3f V\n", phase->rms);
+    fprintf(file, "Peak to peak Voltage:     %.3f V\n", phase->ptp);
+    fprintf(file, "DC Offset:    %.3f V\n", phase->dc_offset);
+    fprintf(file, "Clipped Samples:     %d\n", phase->c_count);
 
     if (phase->w_tolerance == 1) {
         fprintf(file,"Within Tolerance\n\n");
@@ -113,9 +113,9 @@ int results(
     fprintf(file, "\n\n\n");
     fprintf(file, "Samples Analyised: %zu\n\n",sample_count);
 
-    w_phase(file, "PhaseA", PhaseA);
-    w_phase(file, "PhaseB", PhaseB);
-    w_phase(file, "PhaseC", PhaseC);
+    w_phase(file, "Phase A:", PhaseA);
+    w_phase(file, "Phase B:", PhaseB);
+    w_phase(file, "Phase C:", PhaseC);
 
     fclose(file);
 
